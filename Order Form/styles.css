@@ -1,0 +1,61 @@
+body {
+    background-color: #090909;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/047/064/482/small_2x/a-close-up-shot-of-a-classical-guitar-against-a-dark-background-photo.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 1%;
+    background-size: 125vw; 
+    font-family: monospace;
+    color: white;
+    font-size: 16px;
+}
+
+img {    
+    display: block;
+    margin-left: 30%;
+    width: 120px;
+    height: 100px;
+    padding-top: 40px;
+}
+
+h1, p[id="description"] {
+    margin-left: 70px;
+    text-align: center;
+    width: 60%;
+}
+
+form {
+    margin-left: 70px;
+    width: 60vw;
+}
+
+h1 {
+    padding-top: 10px;
+}
+
+p[id="description"] {
+    padding: 15px 0 25px 0;
+}
+
+fieldset {
+    padding: 17x;
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    width: 100%;
+}
+
+label {
+    display: block;
+    padding: 5px 0;
+}
+
+label[id="submit-label"] {
+    padding-left: 45%;
+}
+
+label[id="additional-info"] {
+    padding-left: 20%;
+}
+

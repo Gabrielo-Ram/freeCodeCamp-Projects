@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Custom Guitar Order Form</title>
+    </head>
+    <body>
+        <img src="https://img.freepik.com/free-vector/guitar-white-background_1308-100683.jpg" alt="A cartoon guitar">
+        <h1 id="title">Custom Guitar Order Form</h1>
+        <p id="description">This form will help us gather your style, vibe, and overall aesthetic. We will then create and ship a personalized custom-made guitar just for <em>you</em>!</p>
+        <form id="survey-form">
+        <!-- Shipping Info Info -->
+            <fieldset id="shipping-info">
+                <legend>Shipping Info: </legend>
+                <label id="name-label" for="name" >Please Enter Your Name: <input id="name" type="text" placeholder="John Doe" required></label>
+                <label id="email-label" for="email">Please Enter Your Email: <input id="email" type="email" placeholder="yahoo@yahoo.com" required></label>
+                <label id="number-label" for="age">How long have you been playing guitar? (Approximate in years) <input id="age" type="number" placeholder="0" min="0" max="100" required></label>
+                <label id="locaton-label" for="dropdown">Do you live outside the U.S?
+                    <select id="dropdown" name="outside-usa" required>
+                        <option value="0">(select one)</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </label>
+            <!-- End of Shpping Info-->
+            </fieldset>
+        <!-- Preferences and Tastes -->
+            <fieldset id="tastes">
+                <legend>Preferences: </legend>
+                <p id="type-legend">What type of guitar do you prefer?</p>
+                <label id="type-label" for="acoustic"><input name="type" id="acoustic" value="acoustic" type="radio" checked>Acoustic </label>
+                <label id="type-label" for="electric"><input name="type" id="electric" value="electric" type="radio">Electric</label>
+                <label id="type-label" for="classical"><input name="type" id="classical" value="classical" type="radio">Classical</label>
+                <div>
+                    <p id="genres-caption">What genres of music do you like to play?</p>
+                    <label class="checkbox" id="rock-checkbox-label" for="rock-checkbox"><input type="checkbox" id="rock-checkbox" name="genre" value="rock"> Rock</label>
+                    <label class="checkbox" id="blues-checkbox-label" for="blues-checkbox"><input type="checkbox" id="blues-checkbox" name="genre" value="blues"> Blues</label>
+                    <label class="checkbox" id="jazz-checkbox-label" for="jazz-checkbox"><input type="checkbox" id="jazz-checkbox" name="genre" value="jazz"> Jazz</label>
+                    <label class="checkbox" id="classical-checkbox-label" for="classical-checkbox"><input type="checkbox" id="classical-checkbox" name="genre" value="classical"> Classical</label>
+                    <label class="checkbox" id="pop-checkbox-label" for="pop-checkbox"><input type="checkbox" id="pop-checkbox" name="genre" value="pop"> Pop</label>
+                    <label class="checkbox" id="latin-checkbox-label" for="latin-checkbox"><input type="checkbox" id="latin-checkbox" name="genre" value="latin"> Latin</label>
+                </div>
+                
+            </fieldset>
+        <!-- Additives -->
+            <fieldset>
+                <legend>Additional Information: </legend>
+                <p>Please enter any additional information that will help us to design a product that is best for you. Are you looking to perform in large venues? Are you a bedroom guitarist? Let us know!</p>
+                <label id="additional-info"><textarea name="additional-info" cols="50" rows="10"></textarea></label>
+            </fieldset>
+            <label id="submit-label" for="submit"><input type="submit" id="submit"/></label>
+            <!-- How Do i set all the items under 'Shipping Info' vertically stacked on one another? -->
+        </form>
+    </body>
+</html>
