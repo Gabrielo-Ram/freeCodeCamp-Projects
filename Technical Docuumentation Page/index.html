@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Java Class: Graphics2D Documentation</title>
+    </head>
+    <body>
+        <main id="main-doc">
+            <section id="nav_bar_section">
+                <nav id="navbar">
+                    <header>Graphics2D Info & Frequently Used Methods</header>
+                    <section id="nav_bar_links">
+                        <h2><a class="nav-link" href="#Coordinate_Spaces">Coordinate Spaces</a></h2>
+                        <h2><a class="nav-link" href="#Rendering_Process">Rendering Process</a></h2>
+                        <h2><a class="nav-link" href="#Draw()">Draw()</a></h2>
+                        <h2><a class="nav-link" href="#Fill()">Fill()</a></h2>
+                        <h2><a class="nav-link" href="#Transform()">Transform()</a></h2>  
+                    </section>
+                    
+                </nav>
+            </section>
+            <section class="title-section" id="Java_Class_Graphics2D_Basic_Functions">
+                <header>Java Class Graphics2D Basic Functions</header>
+            </section>
+            <section class="main-section" id="Coordinate_Spaces">
+                <header>Coordinate Spaces</header>
+                <code class="code_block"> translate(int x, int y) </codes>
+                <p>All coordinates passed to a Graphics2D object are specified in a device-independent coordinate system called User Space, which is used by applications. The Graphics2D object contains an AffineTransform object as part of its rendering state that defines how to convert coordinates from user space to device-dependent coordinates in Device Space.</p>
+                <p>Coordinates in device space usually refer to individual device pixels and are aligned on the infinitely thin gaps between these pixels. Some Graphics2D objects can be used to capture rendering operations for storage into a graphics metafile for playback on a concrete device of unknown physical resolution at a later time. Since the resolution might not be known when the rendering operations are captured, the Graphics2D Transform is set up to transform user coordinates to a virtual device space that approximates the expected resolution of the target device. Further transformations might need to be applied at playback time if the estimate is incorrect.</p>
+            </section>
+            <section class="main-section" id="Rendering_Process">
+                <header>Rendering Process</header>
+                <p>The Rendering Process can be broken down into four phases that are controlled by the Graphics2D rendering attributes. The renderer can optimize many of these steps, either by caching the results for future calls, by collapsing multiple virtual steps into a single operation, or by recognizing various attributes as common simple cases that can be eliminated by modifying other parts of the operation.</p>
+                <p>The steps in the rendering process are:
+
+                    Determine what to render.
+                    Constrain the rendering operation to the current Clip. The Clip is specified by a Shape in user space and is controlled by the program using the various clip manipulation methods of Graphics and Graphics2D. This user clip is transformed into device space by the current Transform and combined with the device clip, which is defined by the visibility of windows and device extents. The combination of the user clip and device clip defines the composite clip, which determines the final clipping region. The user clip is not modified by the rendering system to reflect the resulting composite clip.
+                    Determine what colors to render.
+                    Apply the colors to the destination drawing surface using the current Composite attribute in the Graphics2D context.</p>
+                <code class="code_block"> getRenderingHints() </code>
+                <ol>
+                    <li>Paint: The color of the Component.</li>
+                    <li>Font: the Font of the Component.</li>
+                    <li>Stroke: a square pen with a linewidth of 1, no dashing, miter segment joins and square end caps.</li>
+                    <li>Transform: the getDefaultTransform for the GraphicsConfiguration of the Component.</li>
+                    <li>Composite: The AlphaComposite.SRC_OVER rule.</li>
+                    <li>Clip: No rendering Clip, the output is clipped to the Component.</li>
+                </ol>
+            </section>
+            <section class="main-section" id="Draw()">
+                <header>Draw()</header>
+                <code class="code_block">	draw(Shape s) </code>
+                <p>Strokes the outline of a Shape using the settings of the current Graphics2D context. The rendering attributes applied include the Clip, Transform, Paint, Composite and Stroke attributes.        </p>
+                <p>s - the Shape to be rendered, usually in the "Shape" class</p>
+            </section>
+            <section class="main-section" id="Fill()">
+                <header>Fill()</header>
+                <code class="code_block"> fill(Shape s) </code>
+                <p>Fills the interior of a Shape using the settings of the Graphics2D context. The rendering attributes applied include the Clip, Transform, Paint, and Composite.</p>
+                <p>s - the Shape to be rendered, usually in the "Shape" class</p>
+            </section>
+            <section class="main-section" id="Transform()">
+                <header>Transform()</header>
+                <code class="code_block"> transform(AffineTransform Tx) </code>
+                <p>Composes an AffineTransform object with the Transform in this Graphics2D according to the rule last-specified-first-applied. If the current Transform is Cx, the result of composition with Tx is a new Transform Cx'. Cx' becomes the current Transform for this Graphics2D. Transforming a point p by the updated Transform Cx' is equivalent to first transforming p by Tx and then transforming the result by the original Transform Cx. In other words, Cx'(p) = Cx(Tx(p)). A copy of the Tx is made, if necessary, so further modifications to Tx do not affect rendering.    </p>
+                <p>Tx - the AffineTransform object to be composed with the current Transform   </p>
+            </section>
+        </main>
+    </body>
+</html>
