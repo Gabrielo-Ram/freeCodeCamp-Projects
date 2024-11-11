@@ -1,0 +1,139 @@
+* {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+/* ---------------------------------------------- */
+/*              NAVBAR ELEMENTS                   */
+#header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    background-color: rgb(246, 242, 194);
+    display: flex;
+    justify-content: center;
+}
+
+/* You need to refactor the image content, make it the right size and have it respond
+to the size of the window/screen */
+#img-container { 
+    top: 0;
+    width: 8%;
+    height: 100%;
+    margin-left: 4%;
+}
+
+#header-img {   /* This image does not respond well when the window size is changed. Why? */
+    width: 100%;
+    overflow: hidden;
+    top: -70px;
+    position: relative;
+}
+
+#nav-bar {
+    width: 70%;
+    margin-left: 20%;
+    display: flex;
+    place-items: center;
+}
+
+#nav-bar ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-bar li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 2% 4%;
+    align-items: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#nav-bar li a {
+    text-decoration: none;
+    color: rgb(28, 28, 117);
+}
+
+#nav-bar li a:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+/*            END OF NAVBAR ELEMENTS              */  
+/* ---------------------------------------------- */
+
+main {
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60%;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2, h3 {
+    padding: 10px 0;
+    font-size: 27px;
+}
+
+h3 {
+    padding-top: 30px;
+}
+
+p {
+    padding: 12px 0;
+    font-size: 20px;
+}
+
+.video-container {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.video-container span {
+    font-family: Halvetica;
+    padding-top: 10px;
+    width: 65%;
+    font-size: 13px;
+}
+
+.divider {
+    border-bottom: 2px solid grey;
+    padding: 10px 0;
+}
+
+.footer #form {
+    margin: 15px 0;
+    padding-bottom: 50px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    #header {
+        position: relative;
+        z-index: 1;
+        top: 0;
+    }
+
+    #img-container {
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+
+    #nav-bar {
+        width: 100%;
+        margin: 0 auto;
+        top: 0;
+    }
+}
