@@ -1,0 +1,68 @@
+/* Color Pallete */
+:root {
+    --emerald: #23ce6b;
+    --black: #272d2d;
+    --ghost-white: #f6f8ff;
+    --purpureus: #a846a0;
+    --gray: #50514f;
+}
+
+* {
+    background: transparent;
+    font-family:'Times New Roman', Times, serif;
+    color: var(--ghost-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: var(--gray);
+}
+
+h1 {
+    margin: 7% 0 0 0;
+    font-size: 300%;
+}
+
+h3 {
+    font-size: 150%;
+}
+
+.container {
+    border: 5px solid var(--purpureus);
+    background-color: var(--black);
+    margin: 0.5%;
+    padding: 1%;
+    width: 30%;
+    border-radius: 5%;
+}
+
+input[type="text"] {
+    width: 70%;
+    font-size: 150%;
+    border: 1px solid var(--gray);
+}
+input[type="text"]:hover {
+    border: 1px solid var(--ghost-white);
+}
+
+button[id="check-btn"] {
+    background-color: var(--emerald);
+    border: 4px solid var(--purpureus);
+    border-radius: 15%;
+    width: 25%;
+    margin: 7% 0 0 0;
+    padding: 5%;
+    font-size: 125%;
+}
+button[id="check-btn"]:hover {
+    border: 4px solid var(--ghost-white);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+    overflow: hidden;
+}
